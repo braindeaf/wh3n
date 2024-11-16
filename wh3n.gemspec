@@ -32,8 +32,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
-  spec.add_dependency "activerecord", "< 7.1"
-  spec.add_dependency "activesupport", "< 7.1"
+  spec.add_dependency "activerecord", "< 8.1"
+  spec.add_dependency "activesupport", "< 8.1"
 
   spec.add_development_dependency "pry"
   spec.add_development_dependency 'rspec-rails', '~> 4.0.0'
