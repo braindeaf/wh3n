@@ -1,0 +1,12 @@
+sqlite3mem:
+  adapter: <%= "jdbc" if defined? JRUBY_VERSION %>sqlite3
+  database: ":memory:"
+mysql:
+  adapter: <%= defined?(JRUBY_VERSION) ? "jdbcmysql" : "mysql2" %>
+  host: <%= ENV['CI'] ? '127.0.0.1' : 'localhost' %>
+  username: root
+  password:
+  database: wh3n_test
+  <% if ENV['CI'] %>
+  port: 3306
+  <% end %>
